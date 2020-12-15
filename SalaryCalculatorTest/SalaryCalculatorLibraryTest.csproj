@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CalculatorLibrary\SalaryCalculatorLibrary.csproj" />
+    <ProjectReference Include="..\SalaryCalculatorLibrary\SalaryCalculatorLibrary.csproj" />
   </ItemGroup>
 
 </Project>

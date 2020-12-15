@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1169
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Salary", "SalaryCalculator\Salary.csproj", "{BD7A6383-59B1-47A9-8CAC-B296101C5108}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Salary", "Salary\Salary.csproj", "{BD7A6383-59B1-47A9-8CAC-B296101C5108}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalaryCalculatorLibrary", "CalculatorLibrary\SalaryCalculatorLibrary.csproj", "{17F7C8A8-BD9A-4E32-9B86-DD3EC44C6509}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalaryCalculatorLibrary", "SalaryCalculatorLibrary\SalaryCalculatorLibrary.csproj", "{17F7C8A8-BD9A-4E32-9B86-DD3EC44C6509}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalaryCalculatorLibraryTest", "SalaryCalculatorTest\SalaryCalculatorLibraryTest.csproj", "{BBA79785-AA35-4FA2-8272-35DE83435F2F}"
 EndProject

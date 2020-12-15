@@ -106,7 +106,7 @@ namespace Salary
                 }
                 if (!isValid)
                 {
-                    Console.Write("Press Esc key to exit.");
+                    Console.WriteLine("\nPress Esc key to exit.");
                     exit = Console.ReadKey(true).Key == ConsoleKey.Escape;
                 }
 
