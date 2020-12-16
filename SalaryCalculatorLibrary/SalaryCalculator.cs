@@ -11,12 +11,18 @@ namespace SalaryCalculatorLibrary
             serviceContainer = sc;
         }
 
+        public virtual decimal GetSuperannuationPercentage()
+        {
+            const decimal superPercentage = 9.5m;
+            return superPercentage;
+        }
+
         public SalaryDetails Calculate(decimal grossPackage, PayFrequency payFrequency)
         {
             var sd = serviceContainer.GetInstance<SalaryDetails>();
             sd.GrossPackage = grossPackage;
             // gross package = taxable income + 9.5 of taxable income
-            sd.TaxableIncome = Round(grossPackage * 100 / (100 + superPercentage));
+            sd.TaxableIncome = Round(grossPackage * 100 / (100 + GetSuperannuationPercentage()));
             sd.Superannuation = Round(grossPackage - sd.TaxableIncome);
 
             var deductions = sd.GetDeductions();
@@ -27,7 +33,6 @@ namespace SalaryCalculatorLibrary
             return sd;
         }
 
-        private const decimal superPercentage = 9.5m;
         private IServiceContainer serviceContainer;
 
         //TODO: Add unit tests 
