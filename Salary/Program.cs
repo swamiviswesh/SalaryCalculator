@@ -23,7 +23,7 @@ namespace Salary
 
             //Calculate the salary
             Console.WriteLine("\nCalculating salary details...");
-            var sc = c.GetInstance<SalaryCalculator>();
+            var sc = c.GetInstance<ISalaryCalculator>();
             var salary = sc.Calculate(salaryPackage.Value, payFrequency.Value);
 
             //Print salary details to console
@@ -37,7 +37,7 @@ namespace Salary
         private static ServiceContainer GetContainer()
         {
             var sc = new ServiceContainer();
-            sc.Register<SalaryCalculator>((c) =>
+            sc.Register<ISalaryCalculator>((c) =>
             {
                 return new SalaryCalculator(sc);
             }, new PerContainerLifetime());
